@@ -1,0 +1,15 @@
+{
+  "name": "fullstack-javascript-project-44",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/AnnaKudriaeva/fullstack-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/AnnaKudriaeva/fullstack-javascript-project-44/actions)",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anna Kudriaeva <anna.kudriaeva@gmail.com>",
+  "license": "ISC"
+}
