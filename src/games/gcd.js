@@ -1,26 +1,24 @@
-import game from '../src/engine.js';
+import game from '../engine.js';
 
-function rule() {
-  console.log('Find the greatest common divisor of given numbers.');
-}
+const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
-function isNumber() {
+function getQuestionAndAnswer() {
   const number1 = Math.floor(Math.random() * 100) + 2;
   const number2 = Math.floor(Math.random() * 100) + 2;
   const expression = `${number1} ${number2}`;
+  console.log(`Question: ${expression}`);
   let num = number1 <= number2 ? number1 : number2;
   let correctAnswer;
   while (num > 0) {
     if (number1 % num === 0 && number2 % num === 0) {
       correctAnswer = num;
-      break;
+      return correctAnswer;
     }
     num -= 1;
   }
-  console.log(`Question: ${expression}`);
   return correctAnswer;
 }
 
-export default function runGameGcd() {
-  game(rule, isNumber);
+export default function runGcd() {
+  game(DESCRIPTION, getQuestionAndAnswer);
 }

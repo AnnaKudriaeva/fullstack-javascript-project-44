@@ -1,34 +1,29 @@
-import game from '../src/engine.js';
+import game from '../engine.js';
 
-function rule() {
-  console.log('What is the result of the expression?');
-}
+const DESCRIPTION = 'What is the result of the expression?';
 
-function isNumber() {
+function getQuestionAndAnswer() {
   const number1 = Math.floor(Math.random() * 100) + 1;
   const number2 = Math.floor(Math.random() * 100) + 1;
   const operators = ['+', '-', '*'];
   const chosenOperator = operators[Math.floor(Math.random() * operators.length)];
+  console.log(`Question: ${number1} ${chosenOperator} ${number2}`);
   let correctAnswer;
-
   switch (chosenOperator) {
     case '+':
       correctAnswer = number1 + number2;
-      break;
+      return correctAnswer;
     case '-':
       correctAnswer = number1 - number2;
-      break;
+      return correctAnswer;
     case '*':
       correctAnswer = number1 * number2;
-      break;
+      return correctAnswer;
     default:
-      break;
   }
-
-  console.log(`Question: ${number1} ${chosenOperator} ${number2}`);
   return correctAnswer;
 }
 
-export default function runGameCalc() {
-  game(rule, isNumber);
+export default function runCalc() {
+  game(DESCRIPTION, getQuestionAndAnswer);
 }

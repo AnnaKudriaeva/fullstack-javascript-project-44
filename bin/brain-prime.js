@@ -1,9 +1,5 @@
 #!/usr/bin/env node
 
-import runGamePrime from '../games/prime.js';
+import runPrime from '../src/games/prime.js';
 
-function main() {
-  runGamePrime();
-}
-
-main();
+runPrime();

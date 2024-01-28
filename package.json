@@ -1,8 +1,8 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/AnnaKudriaeva/fullstack-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/AnnaKudriaeva/fullstack-javascript-project-44/actions)",
-  "main": "index.js",
+  "description": "Brain Games - is a set of five console games based on the principle of popular mobile applications for brain training.",
+  "main": "src/engine.js",
   "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js",
@@ -23,7 +23,6 @@
   "devDependencies": {
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jest": "^27.6.3"
+    "eslint-plugin-import": "^2.29.1"
   }
 }

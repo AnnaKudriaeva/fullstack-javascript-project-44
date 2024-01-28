@@ -1,10 +1,8 @@
-import game from '../src/engine.js';
+import game from '../engine.js';
 
-function rule() {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-}
+const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-function isNumber() {
+function getQuestionAndAnswer() {
   const number = Math.floor(Math.random() * 100) + 2;
   console.log(`Question: ${number}`);
   let correctAnswer;
@@ -16,6 +14,6 @@ function isNumber() {
   return correctAnswer;
 }
 
-export default function runGameEven() {
-  game(rule, isNumber);
+export default function runEven() {
+  game(DESCRIPTION, getQuestionAndAnswer);
 }
