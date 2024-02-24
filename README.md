@@ -40,17 +40,17 @@ Brain-Prime (Prime number check)
 make brain-prime
 ```
 
-### brain-even Проверка числа на четность
+### brain-even Even Number Check
 [![asciicast](https://asciinema.org/a/kZzXRn9PqpMfyz5kvdt6LAQPs.svg)](https://asciinema.org/a/kZzXRn9PqpMfyz5kvdt6LAQPs)
 
-### brain-calc Калькулятор
+### brain-calc Calculator
 [![asciicast](https://asciinema.org/a/q0N8CtXJLTSqNZj2yNYcP80eJ.svg)](https://asciinema.org/a/q0N8CtXJLTSqNZj2yNYcP80eJ)
 
-### brain-gcd Наибольший общий делитель
+### brain-gcd Greatest Common Divisor
 [![asciicast](https://asciinema.org/a/sO0wQ77aPPzUlW4AloI8jHTL7.svg)](https://asciinema.org/a/sO0wQ77aPPzUlW4AloI8jHTL7)
 
-### brain-progression Арифметическая прогрессия
+### brain-progression Arithmetic Progression
 [![asciicast](https://asciinema.org/a/x27FcfBSZHU7mx03ldRVhEgT8.svg)](https://asciinema.org/a/x27FcfBSZHU7mx03ldRVhEgT8)
 
-### brain-prime Проверка числа на простоту
+### brain-prime Prime Number Check
 [![asciicast](https://asciinema.org/a/ItJUwFl8VkS6t61CSa6EqQvbI.svg)](https://asciinema.org/a/ItJUwFl8VkS6t61CSa6EqQvbI)
