@@ -1,16 +1,15 @@
 import game from '../engine.js';
+import generateRandom from '../utils.js';
 
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
+const MIN_NUMBER = 2;
+const MAX_NUMBER = 100;
 
 function getQuestionAndAnswer() {
-  const number = Math.floor(Math.random() * 100) + 2;
-  console.log(`Question: ${number}`);
-  let correctAnswer;
-  if (number % 2 === 0) {
-    correctAnswer = 'yes';
-  } else {
-    correctAnswer = 'no';
-  }
+  const question = generateRandom(MIN_NUMBER, MAX_NUMBER);
+  console.log(`Question: ${question}`);
+  const isEven = (number) => number % 2 === 0;
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
   return correctAnswer;
 }
 

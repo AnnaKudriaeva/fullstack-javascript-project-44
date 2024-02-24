@@ -1,21 +1,24 @@
 import game from '../engine.js';
+import generateRandom from '../utils.js';
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
+const MIN_NUMBER = 2;
+const MAX_NUMBER = 100;
 
 function getQuestionAndAnswer() {
-  const number1 = Math.floor(Math.random() * 100) + 2;
-  const number2 = Math.floor(Math.random() * 100) + 2;
+  const number1 = generateRandom(MIN_NUMBER, MAX_NUMBER);
+  const number2 = generateRandom(MIN_NUMBER, MAX_NUMBER);
   const expression = `${number1} ${number2}`;
   console.log(`Question: ${expression}`);
-  let num = number1 <= number2 ? number1 : number2;
-  let correctAnswer;
-  while (num > 0) {
-    if (number1 % num === 0 && number2 % num === 0) {
-      correctAnswer = num;
-      return correctAnswer;
+  const num = number1 <= number2 ? number1 : number2;
+  const gcd = (min, num1, num2) => {
+    if (num1 % min === 0 && num2 % min === 0) {
+      return min;
     }
-    num -= 1;
-  }
+    return gcd(min - 1, num1, num2);
+  };
+
+  const correctAnswer = gcd(num, number1, number2);
   return correctAnswer;
 }
 

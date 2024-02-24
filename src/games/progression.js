@@ -1,13 +1,16 @@
 import game from '../engine.js';
+import generateRandom from '../utils.js';
 
 const DESCRIPTION = 'What number is missing in the progression?';
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 10;
 
 function getQuestionAndAnswer() {
-  const startValue = Math.floor(Math.random() * 10) + 1;
-  const difference = Math.floor(Math.random() * 5) + 1;
+  const startValue = generateRandom(MIN_NUMBER, MAX_NUMBER);
+  const difference = generateRandom(MIN_NUMBER, MAX_NUMBER);
   const numElements = 10;
   const progression = Array.from({ length: numElements }, (_, i) => startValue + i * difference);
-  const indexToReplace = Math.floor(Math.random() * progression.length);
+  const indexToReplace = generateRandom(0, progression.length);
   const correctAnswer = progression[indexToReplace];
   progression[indexToReplace] = '..';
   const question = progression.join(' ');

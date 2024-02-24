@@ -1,17 +1,25 @@
 import game from '../engine.js';
+import generateRandom from '../utils.js';
 
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const MIN_NUMBER = 2;
+const MAX_NUMBER = 100;
 
 function getQuestionAndAnswer() {
-  const number = Math.floor(Math.random() * 99) + 2;
-  console.log(`Question: ${number}`);
-  let isPrime = true;
-  for (let i = 2; i <= Math.sqrt(number); i += 1) {
-    if (number % i === 0) {
-      isPrime = false;
+  const question = generateRandom(MIN_NUMBER, MAX_NUMBER);
+  console.log(`Question: ${question}`);
+  const isPrime = (number) => {
+    let prime = true;
+    const limit = Math.sqrt(number);
+    for (let i = 2; i <= limit; i += 1) {
+      if (number % i === 0) {
+        prime = false;
+        break;
+      }
     }
-  }
-  const correctAnswer = isPrime ? 'yes' : 'no';
+    return prime;
+  };
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return correctAnswer;
 }
 
