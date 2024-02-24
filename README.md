@@ -1,41 +1,41 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/AnnaKudriaeva/fullstack-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/AnnaKudriaeva/fullstack-javascript-project-44/actions)  [![Maintainability](https://api.codeclimate.com/v1/badges/c112e57f5b0a8584f298/maintainability)](https://codeclimate.com/github/AnnaKudriaeva/fullstack-javascript-project-44/maintainability)
 
-«Игры разума» — набор из пяти консольных игр
+"Brain Games" - a collection of five console games
 
 
-### Установка и запуск
+### Installation and Launch
 
-Клонирование репозитория
+Clone the repository
 ```
 https://github.com/AnnaKudriaeva/fullstack-javascript-project-44
 ```
 
-В корневой папке выполнить команды:
+Execute the following commands in the root repository folder:
 
-1. Инициализация окружения
+1. Initialize the environment
 ```
 make install
 ```
-2. Запуск игр 
+2. Launch the games
 
-Brain-Even (Проверка на четность)
+Brain-Even (Even number check)
 ```
 make brain-even
 ```
-Brain-Calc (Калькулятор)
+Brain-Calc (Calculator)
 ```
 make brain-calc
 ```
-Brain-Gcd (Наибольший общий делитель)
+Brain-Gcd (Greatest Common Divisor)
 ```
 make brain-gcd
 ```
-Brain-Progression (Арифметическая прогрессия)
+Brain-Progression (Arithmetic progression)
 ```
 make brain-progression
 ```
-Brain-Prime (Проверка числа на простоту)
+Brain-Prime (Prime number check)
 ```
 make brain-prime
 ```
