@@ -5,10 +5,11 @@ const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 const MIN_NUMBER = 2;
 const MAX_NUMBER = 100;
 
+const isEven = (number) => number % 2 === 0;
+
 function getQuestionAndAnswer() {
   const question = generateRandom(MIN_NUMBER, MAX_NUMBER);
   console.log(`Question: ${question}`);
-  const isEven = (number) => number % 2 === 0;
   const correctAnswer = isEven(question) ? 'yes' : 'no';
   return correctAnswer;
 }
